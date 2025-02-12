@@ -1,0 +1,10 @@
+docopt==0.6.2
+numpy==2.2.2
+pykwalify==1.8.0
+pyradiomics==3.0.1
+python-dateutil==2.9.0.post0
+PyWavelets==1.8.0
+ruamel.yaml==0.18.10
+ruamel.yaml.clib==0.2.12
+SimpleITK==2.4.1
+six==1.17.0
