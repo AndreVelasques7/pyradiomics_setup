@@ -10,9 +10,11 @@ COPY requirements.txt setup.sh test_pyradiomics.py ./
 # Instalar dependências do sistema necessárias
 RUN apt update && apt install -y build-essential cmake gcc g++ python3-dev
 
-# Criar ambiente virtual e instalar pacotes
+# Criar ambiente virtual e instalar numpy primeiro
 RUN python3 -m venv pyradiomics_env \
-    && /bin/bash -c "source pyradiomics_env/bin/activate && pip install --upgrade pip setuptools wheel && pip install -r requirements.txt"
+    && /bin/bash -c "source pyradiomics_env/bin/activate && pip install --upgrade pip setuptools wheel" \
+    && /bin/bash -c "source pyradiomics_env/bin/activate && pip install numpy" \
+    && /bin/bash -c "source pyradiomics_env/bin/activate && pip install -r requirements.txt"
 
 # Definir o comando padrão para o container
 CMD ["/bin/bash"]
