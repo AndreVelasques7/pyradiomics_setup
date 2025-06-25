@@ -1,12 +1,12 @@
 # PyRadiomics Setup
 
-Este repositório contém um ambiente automatizado para configurar rapidamente o **PyRadiomics** utilizando **Python** em um ambiente **Linux (Ubuntu/WSL)** ou via **Docker**.
+This repository provides an automated environment to quickly set up **PyRadiomics** using **Python** in a **Linux (Ubuntu/WSL)** environment or via **Docker**.
 
-## 📌 Instalação
+## 📌 Installation
 
-### 🔹 1. Clone o repositório
+### 🔹 1. Clone the repository
 
-Abra o terminal e execute:
+Open the terminal and run:
 
 ```bash
 git clone https://github.com/AndreVelasques7/pyradiomics_setup.git
@@ -15,43 +15,43 @@ cd pyradiomics_setup
 
 ---
 
-## 🐍 Configuração via Ambiente Virtual
+## 🐍 Setup via Virtual Environment
 
-### 🔹 2. Execute o script de instalação
+### 🔹 2. Run the installation script
 
-Este comando criará o ambiente virtual, instalará as dependências e o ativará automaticamente:
+This command will create the virtual environment, install all dependencies, and activate the environment automatically:
 
 ```bash
 source setup.sh
 ```
 
-### 🔹 3. Teste se o PyRadiomics está funcionando
+### 🔹 3. Test if PyRadiomics is working
 
-Agora, para verificar se a instalação foi bem-sucedida, execute:
+To verify that everything is installed correctly, run:
 
 ```bash
 python3 test_pyradiomics.py
 ```
 
-Se tudo estiver certo, ele imprimirá a versão do **PyRadiomics, NumPy** e outras bibliotecas.
+If successful, it will print the version of **PyRadiomics, NumPy**, and other libraries.
 
-### 🔹 4. O que este setup faz?
+### 🔹 4. What does this setup do?
 
-O script `setup.sh` executa as seguintes etapas:
-✅ Instala pacotes essenciais (`python3-venv, pip, gcc, cmake, etc.`).
-✅ Cria um ambiente virtual chamado `pyradiomics_env`.
-✅ Instala todas as dependências listadas em `requirements.txt`.
-✅ Ativa automaticamente o ambiente virtual ao final.
+The `setup.sh` script performs the following steps:
+✅ Installs essential packages (`python3-venv, pip, gcc, cmake, etc.`)  
+✅ Creates a virtual environment named `pyradiomics_env`  
+✅ Installs all dependencies listed in `requirements.txt`  
+✅ Automatically activates the virtual environment at the end
 
-### 🔹 5. Gerenciando o ambiente virtual
+### 🔹 5. Managing the virtual environment
 
-Para ativar o ambiente após reiniciar o terminal:
+To activate the environment after restarting the terminal:
 
 ```bash
 source pyradiomics_env/bin/activate
 ```
 
-Para sair do ambiente virtual:
+To deactivate the virtual environment:
 
 ```bash
 deactivate
@@ -59,33 +59,33 @@ deactivate
 
 ---
 
-## 🐳 Configuração via Docker
+## 🐳 Setup via Docker
 
-Caso prefira rodar o **PyRadiomics** em um container Docker sem instalar dependências diretamente no sistema, siga os passos abaixo.
+If you prefer to run **PyRadiomics** in a Docker container without installing dependencies directly on your system, follow the steps below.
 
-### 🔹 1. Construa a imagem Docker
+### 🔹 1. Build the Docker image
 
-Com o Docker instalado, rode o seguinte comando dentro do diretório do projeto:
+With Docker installed, run the following command inside the project directory:
 
 ```bash
 docker build -t pyradiomics_container .
 ```
 
-### 🔹 2. Execute o container
+### 🔹 2. Run the container
 
 ```bash
 docker run -it pyradiomics_container
 ```
 
-Isso iniciará um terminal dentro do container. Agora, você pode testar o PyRadiomics rodando:
+This will start a terminal inside the container. Now you can test PyRadiomics by running:
 
 ```bash
 python3 test_pyradiomics.py
 ```
 
-### 🔹 3. Saindo do container
+### 🔹 3. Exiting the container
 
-Para sair do container interativo, digite:
+To exit the interactive container, type:
 
 ```bash
 exit
@@ -93,11 +93,11 @@ exit
 
 ---
 
-## 📌 Requisitos
+## 📌 Requirements
 
-- **Ubuntu / WSL 2** (Windows Subsystem for Linux)
-- **Python 3.10+**
-- **Acesso à internet** para baixar pacotes
-- **Docker (opcional, se for utilizar via container)**
+- **Ubuntu / WSL 2** (Windows Subsystem for Linux)  
+- **Python 3.10+**  
+- **Internet access** to download packages  
+- **Docker** (optional, if using the containerized version)
 
-Caso tenha qualquer dúvida ou problema, sinta-se à vontade para abrir uma **issue** no repositório! 🚀
+If you have any questions or run into issues, feel free to open an **issue** in the repository! 🚀
